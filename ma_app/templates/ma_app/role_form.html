@@ -1,0 +1,12 @@
+{% extends 'ma_app/base.html' %}
+
+{% block content %}
+<div class="card">
+    <h2>Ajouter un rôle</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="submit">Enregistrer</button>
+    </form>
+</div>
+{% endblock %}
